@@ -30,3 +30,20 @@ int* task02(int* array, int size) {
 
 	return arr;
 }
+
+double mathFunc1(double x) {
+	return acos(0.5 * fabs(sin(mathFunc2(x) - 3))) + 3 * x;
+}
+
+double mathFunc2(double x) {
+	double result;
+
+	if (x <= 2) {
+		result = (pow(x, 2) - 7 * x + 3) / (x - exp(x));
+	}
+	else {
+		result = pow(atan(x), 2);
+	}
+
+	return result;
+}

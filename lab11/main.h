@@ -2,6 +2,7 @@
 #pragma once
 #include <iostream>
 #include <ctime>
+#include <math.h>
 
 using namespace std;
 
@@ -10,3 +11,5 @@ double getRandomFloat(double, double);
 
 bool task01(int*, int);
 int* task02(int*, int);
+double mathFunc1(double);
+double mathFunc2(double);

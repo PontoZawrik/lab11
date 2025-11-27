@@ -22,13 +22,37 @@ int main() {
 		cin >> p;
 
 		switch (p) {
-		case 1: cout << boolalpha << task01(array, n) << endl; break;
+		case 1: {
+			cout << boolalpha << task01(array, n) << endl;
+		} break;
+
 		case 2: {
 			int* temp = task02(array, n);
 			cout << "Сумма элементов кратных восьми: " << temp[0] << endl;
 			cout << "Произведение элементов кратных восьми: " << temp[1] << endl;
 			cout << "Количество отрицательных элементов: " << temp[2] << endl;
 		} break;
+
+		case 3: {
+			double xn, xk;
+
+			cout << "Введите диапазон x: ";
+			cin >> xn >> xk;
+
+			if (xn > xk) {
+				double t = xn;
+				xn = xk;
+				xk = t;
+			}
+
+			cout << "------------------------------" << endl;
+			for (double i = xn; i <= xk; i += 0.1) {
+				cout << "f(" << i << ") = " << mathFunc1(i) << endl;
+				cout << "u(" << i << ") = " << mathFunc2(i) << endl;
+				cout << "------------------------------" << endl;
+			}
+		} break;
+
 
 		case -1: cout << "Выход из программы.\n"; break;
 		default: cout << "Неверный номер.\n";
