@@ -12,6 +12,9 @@ int main() {
 	setlocale(LC_ALL, "ru");
 	srand(time(NULL));
 
+	const int n = 10;
+	int array[n]{ 4, 7, 10, 16, 8, -34, 234, 76, -123, 54 };
+
 	int p;
 
 	do {
@@ -19,8 +22,13 @@ int main() {
 		cin >> p;
 
 		switch (p) {
-		//case 1: task01(); break;
-		//case 2: task02(); break;
+		case 1: cout << boolalpha << task01(array, n) << endl; break;
+		case 2: {
+			int* temp = task02(array, n);
+			cout << "Сумма элементов кратных восьми: " << temp[0] << endl;
+			cout << "Произведение элементов кратных восьми: " << temp[1] << endl;
+			cout << "Количество отрицательных элементов: " << temp[2] << endl;
+		} break;
 
 		case -1: cout << "Выход из программы.\n"; break;
 		default: cout << "Неверный номер.\n";
