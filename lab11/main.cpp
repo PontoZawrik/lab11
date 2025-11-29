@@ -70,7 +70,8 @@ int main() {
 
 			cout << "Сумма: " << evenSum(array, row, col) << endl;
 			cout << "Произведение: " << mulArray(array, row, col) << endl;
-		}
+			cout << "Минимальное число: " << minValue(array, row, col) << endl;
+		} break;
 
 
 		case -1: cout << "Выход из программы.\n"; break;

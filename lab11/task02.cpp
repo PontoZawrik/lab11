@@ -59,3 +59,35 @@ double mulArray(double** array, int row, int col) {
 
 	return mul;
 }
+
+double minValue(double** array, int row, int col) {
+	int count = 1;
+	double min = array[0][0];
+	double avg = 0;
+
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
+			if (min > array[i][j]) {
+				min = array[i][j];
+				count = 1;
+			}
+
+			min == array[i][j] ? count++ : count;
+			avg += array[i][j];
+		}
+	}
+
+	avg /= (row * col);
+
+	if (count > 1) {
+		for (int i = 0; i < row; i++) {
+			for (int j = 0; j < col; j++) {
+				if (min == array[i][j]) {
+					array[i][j] = avg;
+				}
+			}
+		}
+	}
+
+	return min;
+}

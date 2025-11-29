@@ -19,3 +19,4 @@ double** createDouble(int, int);
 void userInit(double**, int, int);
 double evenSum(double**, int, int);
 double mulArray(double**, int, int);
+double minValue(double**, int, int);
