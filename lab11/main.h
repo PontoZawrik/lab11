@@ -18,3 +18,4 @@ double mathFunc2(double);
 double** createDouble(int, int);
 void userInit(double**, int, int);
 double evenSum(double**, int, int);
+double mulArray(double**, int, int);

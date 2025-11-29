@@ -68,7 +68,8 @@ int main() {
 
 			userInit(array, row, col);
 
-			cout << evenSum(array, row, col) << endl;
+			cout << "Сумма: " << evenSum(array, row, col) << endl;
+			cout << "Произведение: " << mulArray(array, row, col) << endl;
 		}
 
 

@@ -45,3 +45,17 @@ double evenSum(double** array, int row, int col) {
 
 	return sum;
 }
+
+double mulArray(double** array, int row, int col) {
+	double mul = 1;
+
+	for (int i = 1; i < row - 1; i++) {
+		for (int j = 0; j < col; j++) {
+			if (i != j) {
+				mul *= array[i][j];
+			}
+		}
+	}
+
+	return mul;
+}
