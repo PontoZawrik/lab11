@@ -16,7 +16,7 @@ int main() {
 	int array[n]{ 4, 7, 10, 16, 8, -34, 234, 76, -123, 54 };
 
 	int p;
-
+	
 	do {
 		cout << "Введите номер задания (-1 для выхода): ";
 		cin >> p;
@@ -52,6 +52,24 @@ int main() {
 				cout << "------------------------------" << endl;
 			}
 		} break;
+
+		case 4: {
+			int row, col;
+
+			do {
+				cout << "Введите размерность массива: ";
+				cin >> row >> col;
+			} while (row <= 0 || col <= 0);
+
+			double** array = createDouble(row, col);
+			if (array == NULL) {
+				break;
+			}
+
+			userInit(array, row, col);
+
+
+		}
 
 
 		case -1: cout << "Выход из программы.\n"; break;
