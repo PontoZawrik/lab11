@@ -68,7 +68,7 @@ int main() {
 
 			userInit(array, row, col);
 
-
+			cout << evenSum(array, row, col) << endl;
 		}
 
 

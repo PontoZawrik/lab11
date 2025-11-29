@@ -33,3 +33,15 @@ void userInit(double** array, int row, int col) {
 
 	return;
 }
+
+double evenSum(double** array, int row, int col) {
+	double sum = 0;
+
+	for (int i = 0; i < row; i += 2) {
+		for (int j = 0; j < col; j += 2) {
+			sum += array[i][j];
+		}
+	}
+
+	return sum;
+}
