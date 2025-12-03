@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 #include <iostream>
 #include <ctime>
 #include <math.h>
@@ -20,3 +19,5 @@ void userInit(double**, int, int);
 double evenSum(double**, int, int);
 double mulArray(double**, int, int);
 double minValue(double**, int, int);
+int avgCount(double**, int, int);
+void printArray(double**, int, int);

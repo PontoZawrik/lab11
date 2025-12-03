@@ -1,4 +1,4 @@
-#include "main.h"
+#include "Tolstik.h"
 
 bool task01(int* array, int size) {
 	bool flag = true;

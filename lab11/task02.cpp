@@ -1,4 +1,4 @@
-#include "main.h"
+#include "Tolstik.h"
 
 double** createDouble(int row, int col) {
 	double** array = new double* [row];
@@ -67,13 +67,13 @@ double minValue(double** array, int row, int col) {
 
 	for (int i = 0; i < row; i++) {
 		for (int j = 0; j < col; j++) {
+			min == array[i][j] ? count++ : count;
+			avg += array[i][j];
+
 			if (min > array[i][j]) {
 				min = array[i][j];
 				count = 1;
 			}
-
-			min == array[i][j] ? count++ : count;
-			avg += array[i][j];
 		}
 	}
 
@@ -90,4 +90,36 @@ double minValue(double** array, int row, int col) {
 	}
 
 	return min;
+}
+
+int avgCount(double** array, int row, int col) {
+	double avg = 0;
+
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
+			avg += array[i][j];
+		}
+	}
+
+	avg /= (row * col);
+	int count = 0;
+
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j += 2) {
+			array[i][j] > avg ? count++ : count;
+		}
+	}
+
+	return count;
+}
+
+void printArray(double** array, int row, int col) {
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
+			cout << array[i][j] << "\t";
+		}
+		cout << endl;
+	}
+
+	return;
 }
