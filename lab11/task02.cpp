@@ -10,7 +10,7 @@ double** createDouble(int row, int col) {
 			if (array[i] == NULL) {
 
 				for (int j = 0; j < i; j++) {
-					delete[] array[i];
+					delete[] array[j];
 				}
 				delete[] array;
 				array = NULL;

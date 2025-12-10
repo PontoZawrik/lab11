@@ -46,7 +46,7 @@ int main() {
 				}
 
 				cout << "------------------------------" << endl;
-				for (double i = xn; i <= xk; i += 0.1) {
+				for (double i = xn; i <= xk + 0.001; i += 0.1) {
 					cout << "f(" << i << ") = " << mathFunc1(i) << endl;
 					cout << "u(" << i << ") = " << mathFunc2(i) << endl;
 					cout << "------------------------------" << endl;
